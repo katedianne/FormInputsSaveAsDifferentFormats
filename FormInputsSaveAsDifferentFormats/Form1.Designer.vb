@@ -22,7 +22,6 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Name = New System.Windows.Forms.Label()
         Me.inputName = New System.Windows.Forms.TextBox()
         Me.address = New System.Windows.Forms.Label()
         Me.inputAddress = New System.Windows.Forms.TextBox()
@@ -31,16 +30,9 @@ Partial Class Form1
         Me.txt = New System.Windows.Forms.Button()
         Me.xml = New System.Windows.Forms.Button()
         Me.json = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.nameLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'Name
-        '
-        Me.Name.AutoSize = True
-        Me.Name.Location = New System.Drawing.Point(36, 31)
-        Me.Name.Name = "Name"
-        Me.Name.Size = New System.Drawing.Size(35, 13)
-        Me.Name.TabIndex = 0
-        Me.Name.Text = "Name"
         '
         'inputName
         '
@@ -109,11 +101,31 @@ Partial Class Form1
         Me.json.Text = "Save as JSON File (.json)"
         Me.json.UseVisualStyleBackColor = True
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(326, 273)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Label1"
+        '
+        'nameLabel
+        '
+        Me.nameLabel.AutoSize = True
+        Me.nameLabel.Location = New System.Drawing.Point(39, 31)
+        Me.nameLabel.Name = "nameLabel"
+        Me.nameLabel.Size = New System.Drawing.Size(35, 13)
+        Me.nameLabel.TabIndex = 4
+        Me.nameLabel.Text = "Name"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(404, 270)
+        Me.Controls.Add(Me.nameLabel)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.json)
         Me.Controls.Add(Me.xml)
         Me.Controls.Add(Me.txt)
@@ -122,15 +134,12 @@ Partial Class Form1
         Me.Controls.Add(Me.inputAddress)
         Me.Controls.Add(Me.address)
         Me.Controls.Add(Me.inputName)
-        Me.Controls.Add(Me.Name)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Name As Label
     Friend WithEvents inputName As TextBox
     Friend WithEvents address As Label
     Friend WithEvents inputAddress As TextBox
@@ -139,4 +148,6 @@ Partial Class Form1
     Friend WithEvents txt As Button
     Friend WithEvents xml As Button
     Friend WithEvents json As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents nameLabel As Label
 End Class
